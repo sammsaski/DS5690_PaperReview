@@ -17,6 +17,8 @@ A review of Extending Content Window of Large Language Models via Positional Int
 
 Maximum possible points: 112
 
+---
+
 # Overview
 
 # Architecture
