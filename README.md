@@ -24,6 +24,11 @@ Maximum possible points: 112
 
 ---
 
+<p align="center">
+<img src="images/warm-up-question.png" style="width:100%; height:auto;">
+</p>
+
+
 # Overview
 
 **Warm-up:** How does the context window affect the computational complexity of a transformer?
