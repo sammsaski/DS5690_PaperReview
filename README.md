@@ -126,6 +126,15 @@ A major impact of the this work is that it is primarily focused (and implemented
 ### 2. Redefining the Possibilities with Transformers
 By providing a more accessible way to acquire a large language model with significantly longer context window, industries such as health care, legal, and research become domains to which transformers can be applied. Previously, the limits of context window and the computational cost of training a model with a longer context window made it much more challenging for inventive LLM solutions to problems in these industries; of which there are many. For example, models can now process and summarize entire patient histories or legal documents without being constrained by short context windows. This has the potential to streamline operations in domains that require analysis of extended, detailed information.
 
+# Recap
+<p align="center">
+<img src="images/position-interpolation.png" style="width:100%; height:auto;">
+</p>
+
+<p align="center">
+<img src="images/position-interpolation-formula.png" style="width:50%; height:auto;">
+</p>
+
 
 ## Resources to directly help understand Position Interpolation better
 1. https://github.com/ggerganov/llama.cpp/discussions/1965 - official discussion by Meta engineers/researchers
