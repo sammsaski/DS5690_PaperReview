@@ -59,6 +59,22 @@ This work has huge implications for the future of AI. The authors show a computa
 
 # Results
 
+<p align="center">
+<img src="images/eff-cont-window-size-after-ft.png">
+</p>
+
+<p align="center">
+<img src="images/perplexity-on-pg19.png">
+</p>
+
+<p align="center">
+<img src="images/perplexity-on-pg19-pi-only.png">
+</p>
+
+<p align="center">
+<img src="images/degredation-on-original-task-after-ft.png">
+</p>
+
 # Resources to directly help understand Position Interpolation better
 1. https://github.com/ggerganov/llama.cpp/discussions/1965 - official discussion by Meta engineers/researchers.
 2. https://kaiokendev.github.io/til#extending-context-to-8k - initial proof of concept
