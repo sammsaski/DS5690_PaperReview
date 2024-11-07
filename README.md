@@ -111,6 +111,10 @@ For evaluating the PI-augmented models' perplexity in long-context tasks, the au
 <img src="images/degredation-on-original-task-after-ft.png">
 </p>
 
+<p align="center">
+<img src="images/document-summarization-results.png">
+</p>
+
 # Critical Analysis
 
 One of the glaring oversights of the paper is that it primarily evaluates PI on LLaMA models, which uses RoPE. However, many popular models (like GPT-4, etc.) use different positional encodings. It's unclear how effective the proposed method would be for extending context window length in models that use other positional encoding techniques.
