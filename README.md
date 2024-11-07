@@ -51,7 +51,8 @@ Rotary position embeddings represent positional information by rotating the toke
 <p align="center">
 <img src="images/rope-example.png" style="width:70%; height:auto;">
 </p>
-_Citation: Sambit Kumar Barik. Decoding Rotary Positional Embeddings (RoPE): The Secret Sauce for Smarter Transformers._
+
+_Citation: Sambit Kumar Barik. Decoding Rotary Positional Embeddings (RoPE): The Secret Sauce for Smarter Transformers._ [Link](https://medium.com/@DataDry/decoding-rotary-positional-embeddings-rope-the-secret-sauce-for-smarter-transformers-193cbc01e4ed).
 
 
 
