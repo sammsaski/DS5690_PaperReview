@@ -52,6 +52,8 @@ Rotary position embeddings represent positional information by rotating the toke
 <img src="images/rope-example.png" style="width:70%; height:auto;">
 </p>
 
+Because RoPE is parameterized by the position of the token in the sequence, then the rotation applied on the token is unique, thereby resulting in an embedding that contains information about its content and its position.
+
 
 # Position Interpolation
 Before jumping into the details of the method, let's first introduce an intuition for it. The image below provides a visualization of how Position Interpolation affects the positional embeddings of a sequence.
