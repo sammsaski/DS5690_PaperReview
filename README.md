@@ -36,7 +36,8 @@ Naively, we could try fine-tuning an existing pre-trained Transformer with a lno
 
 Position Interpolation: instead of extrapolation, directly down-scale the position indices so that the maximum position index matches the previous context window limit in the pre-training stage.
 
-# Architecture
+# Position Interpolation
+Before jumping into the details of the method, let's first introduce an intuition for it. The image below provides a visualization of how Position Interpolation affects the positional embeddings of a sequence.
 <p align="center">
 <img src="images/position-interpolation.png">
 </p>
