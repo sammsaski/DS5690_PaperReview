@@ -85,6 +85,13 @@ To apply Positional Interpolation to RoPE, all that needs to be done is a linear
 It is an amazingly simple idea that is so powerful.
 
 # Experiments
+With their experiments, the authors demonstrate that PI can be used to extend the effective context window length 32x its original length using less than 1000 training steps. The models augmented with PI are tested on tasks such as language modeling, passkey retrieval, and long document summarization.
+
+### Model Variants
+The authors extended the pre-trained 7B, 13B, 33B and 65B LLaMA models to various context window of sizes up to 32768, using either direct fine-tuning or Position Interpolation method. 
+
+### Datasets
+For evaluating the PI-augmented models' perplexity in long-context tasks, the authors used the PG-19 and Arxiv Proof Pile datasets. These two datasets contain a corpus of books and scientific documents, respectively. The authors also wanted to examine the effective context window size of the finetuned models. To do so, the authors generate prompts containing a large amount of text and a passkey. The passkey is planted at some point in the text and it is the job of the model to be able to retrieve it with some amount of consistency. If the model is able to do so when the passkey is $k$ tokens away from when it is prompted to retrieve it, then it is said to have an effective context window length of $k$. Finally, the authors examine the models' ability to summarize long documents. The authors use the GovReport dataset, which contains 17457 documents for training and 972 documents for evaluation. 
 
 # Results
 
