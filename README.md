@@ -42,6 +42,12 @@ _Citation: Sambit Kumar Barik. Decoding Rotary Positional Embeddings (RoPE): The
 
 Because RoPE is parameterized by the position of the token in the sequence, then the rotation applied on the token is unique, thereby resulting in an embedding that contains information about its content and its position.
 
+However, RoPE, like many other positional encoding techniques, is susceptible to failing when used for inference on a context window length beyond what was used in training.
+
+<p align="center">
+<img src="images/attn-as-distance-grows.png" style="width:100%; height:auto;">
+</p>
+
 
 # Position Interpolation
 Before jumping into the details of the method, let's first introduce an intuition for it. The image below provides a visualization of how Position Interpolation affects the positional embeddings of a sequence.
