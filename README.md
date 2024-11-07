@@ -11,7 +11,7 @@ large language models via positional interpolation,” 2023.
 - [x] [10] Presentation Materials (README format + screen clear enough)
 - [ ] [15] Overview (5-minute overview providing context, stating problem, characterizing approach, brief account of how problem was addressed)
 - [x] [8] Question 1 (prepare and deliver a question to the audience)
-- [ ] [5] Question 2 (prepare and deliver a question to the audience)
+- [x] [5] Question 2 (prepare and deliver a question to the audience)
 - [ ] [15] Architecture overview (pseudocode description of model or approach)
 - [x] [15] Critical Analysis (what was overlooked? what could have been developed further? were there any errors?)
 - [x] [15] Impacts (what was the impact of the work?)\
