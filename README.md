@@ -49,7 +49,7 @@ Positional embeddings encode information about the ordering of tokens in a seque
 Rotary position embeddings represent positional information by rotating the token embedding based on its position in the sequence. This rotation is applied in the complex plane and is parameterized by the position index, allowing the model to encode positional differences more naturally. One of the key benefits of RoPE at its introduction was its ability to encode relative and absolute positions between tokens in a sequence.
 
 <p align="center">
-<img src="images/rope-example.png" style="width:100%; height:auto;">
+<img src="images/rope-example.png" style="width:70%; height:auto;">
 </p>
 
 
