@@ -1,6 +1,5 @@
-# DS5690_PaperReview
-A review of [Extending Content Window of Large Language Models via Positional Interpolation](https://arxiv.org/abs/2306.15595) by <br/>
-Shouyuan Chen, Sherman Wong, Liangjian Chen, and Yuandong Tian.
+# A Review of Extending Content Window of Large Language Models via Positional Interpolation
+Link to paper: [Extending Content Window of Large Language Models via Positional Interpolation](https://arxiv.org/abs/2306.15595) by Shouyuan Chen, Sherman Wong, Liangjian Chen, and Yuandong Tian.
 
 **Citation.**
 S. Chen, S. Wong, L. Chen, and Y. Tian, “Extending context window of
