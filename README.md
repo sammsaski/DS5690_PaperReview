@@ -89,7 +89,7 @@ By providing a more accessible way to acquire a large language model with signif
 3. https://kaiokendev.github.io/context - a longer write up of (2)
 4. https://www.youtube.com/watch?v=oyXdmtHgZFw&ab_channel=GabrielMongaras - a helpful paper review
 
-# Resources to help understand background, motivation, and related works of Position Interpolation better
+# Background, motivation, and related works of Position Interpolation
 1. https://arxiv.org/abs/2104.09864 - RoPE paper
 2. https://www.llama.com/ - LLaMA
 3. https://arxiv.org/abs/2108.12409 - ALiBi
