@@ -73,26 +73,8 @@ To apply Positional Interpolation to RoPE, all that needs to be done is a linear
 
 We are lucky enough to be able to see what the code changes look like because LLaMA is an open-source model and the developer community provided a detailed discussion on the ideation and implementation of this method.
 
-```git
-diff --git a/examples/main/main.cpp b/examples/main/main.cpp
-index 941312f..7fa3ae2 100644
---- a/examples/main/main.cpp
-+++ b/examples/main/main.cpp
-@@ -84,8 +84,8 @@ int main(int argc, char ** argv) {
-         return 0;
-     }
- 
--    if (params.n_ctx > 2048) {
--        fprintf(stderr, "%s: warning: model does not support context sizes greater than 2048 tokens (%d specified);"
-+    if (params.n_ctx > 8192) {
-+        fprintf(stderr, "%s: warning: model does not support context sizes greater than 8192 tokens (%d specified);"
-                 "expect poor results\n", __func__, params.n_ctx);
-     } else if (params.n_ctx < 8) {
-         fprintf(stderr, "%s: warning: minimum context size is 8, using minimum size.\n", __func__);
-diff --git a/ggml.c b/ggml.c
-index 4319683..0aa4bd1 100644
---- a/ggml.c
-+++ b/ggml.c
+```diff
+diff --git a/examples/main/main.cpp b/examples/main/main.cpp 
 @@ -12172,7 +12172,7 @@ static void ggml_compute_forward_rope_f32(
                  if (ir++ < ir0) continue;
                  if (ir   > ir1) break;
