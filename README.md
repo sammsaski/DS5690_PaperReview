@@ -38,6 +38,15 @@ To answer these demands, the authors introduce **Position Interpolation** (PI). 
 
 **Q:** What happens if we extrapolate too far?
 
+# Background
+
+### Positional Embeddings
+**What are positional embeddings? Why do we care?**
+
+Positional embeddings encode information about the ordering of tokens in a sequence. It is easy to see how significantly the meaning of a sentence can change when changing only the ordering of the words. For example, let's look at the phrase "Samuel Sasaki is a fan of LeBron James". By manipulating the ordering of the words, one possible outcome is "Lebron James is a fan of Samuel Sasaki", which, as much as I might want it to be, is just not true.
+
+### Rotary Positional Embeddings (RoPE)
+
 
 # Position Interpolation
 Before jumping into the details of the method, let's first introduce an intuition for it. The image below provides a visualization of how Position Interpolation affects the positional embeddings of a sequence.
