@@ -28,24 +28,18 @@ Maximum possible points: 112
 
 One of major limitations of large language models (LLMs) is the context window. Generally speaking, the model is limited to the context size that it is trained on. Trying to use the model beyond its context window length results in a significant performance drop. This is a problem because the computational complexity of training the large language model is a function of the context size, $O(n^2 \cdot d)$, where $n$ is the context window length. To summarize, large language models struggle to perform on tasks that are beyond the scope of their context window, but increasing the context window causes quadratic growth in the computational demand of training the model.
 
-This leads us to the problem statement: can we extend the context window of an existing pre-trained LLM?
+This leads us to the problem statement: **can we extend the context window of an existing pre-trained LLM?**
 
 This problem statement is a direct target of the concerns outlined above. First, it concerns itself with effectively increasing the context window length without performance degredation. Second, it neglects the quadratic increase in computational cost of training by leveraging pre-trained LLMs.
 
-
----
-
-The proposed method, Position Interpolation (PI), extends the context window sizes of RoPE-bsed pretrained LLMs such as LLaMA models to up to 32768 with minimal fine-tuning (within 1000 steps), while demonstrating strong empirical results on various tasks that require long context, including passkey retrieval, language modeling, and long document summarization from LLaMA 7B to 65B. The method also adequately preserves model performance on the original context laength (2048). 
-
-Position Interpolation linearly down-scales the input position indices to match the original context window size, rather than extrapolating beyond the trained context length, which may lead to catastrophically high attention scores that completely ruin the self-attention mechanism.
-
-The problem: can we extend the context window of an existing pre-trained LLM?
+To answer these demands, the authors introduce **Position Interpolation** (PI). Position Interpolation linearly down-scales the input position indices to match the original context window size, rather than extrapolating beyond the trained context length, which may lead to catastrophically high attention scores that completely ruin the self-attention mechanism.
 
 **Q:** What happens if we extrapolate too far?
 
 Naively, we could try fine-tuning an existing pre-trained Transformer with a lnoger context window. Empirically, however, the authors found that models trained this way adapt to long context windows very slowly. Table 4 shows that training this way for long periods of time (> 10000 batches) resulted in only an effective context window length increase from 2048 -> 2560, whereas PI could do it up to 32768 in less than 1000 batches.
 
 Position Interpolation: instead of extrapolation, directly down-scale the position indices so that the maximum position index matches the previous context window limit in the pre-training stage.
+
 
 # Position Interpolation
 Before jumping into the details of the method, let's first introduce an intuition for it. The image below provides a visualization of how Position Interpolation affects the positional embeddings of a sequence.
