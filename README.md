@@ -71,6 +71,66 @@ To apply Positional Interpolation to RoPE, all that needs to be done is a linear
 <img src="images/position-interpolation-formula.png" style="width:50%; height:auto;">
 </p>
 
+We are lucky enough to be able to see what the code changes look like because LLaMA is an open-source model and the developer community provided a detailed discussion on the ideation and implementation of this method.
+
+```git
+diff --git a/examples/main/main.cpp b/examples/main/main.cpp
+index 941312f..7fa3ae2 100644
+--- a/examples/main/main.cpp
++++ b/examples/main/main.cpp
+@@ -84,8 +84,8 @@ int main(int argc, char ** argv) {
+         return 0;
+     }
+ 
+-    if (params.n_ctx > 2048) {
+-        fprintf(stderr, "%s: warning: model does not support context sizes greater than 2048 tokens (%d specified);"
++    if (params.n_ctx > 8192) {
++        fprintf(stderr, "%s: warning: model does not support context sizes greater than 8192 tokens (%d specified);"
+                 "expect poor results\n", __func__, params.n_ctx);
+     } else if (params.n_ctx < 8) {
+         fprintf(stderr, "%s: warning: minimum context size is 8, using minimum size.\n", __func__);
+diff --git a/ggml.c b/ggml.c
+index 4319683..0aa4bd1 100644
+--- a/ggml.c
++++ b/ggml.c
+@@ -12172,7 +12172,7 @@ static void ggml_compute_forward_rope_f32(
+                 if (ir++ < ir0) continue;
+                 if (ir   > ir1) break;
+ 
+-                float theta = (float)p;
++                float theta = (float)p*0.5;
+ 
+                 if (!is_neox) {
+                     for (int64_t i0 = 0; i0 < ne0; i0 += 2) {
+@@ -12285,7 +12285,7 @@ static void ggml_compute_forward_rope_f16(
+                 if (ir++ < ir0) continue;
+                 if (ir   > ir1) break;
+ 
+-                float theta = (float)p;
++                float theta = (float)p*0.5;
+ 
+                 if (!is_neox) {
+                     for (int64_t i0 = 0; i0 < ne0; i0 += 2) {
+@@ -12423,7 +12423,7 @@ static void ggml_compute_forward_rope_back_f32(
+                 if (ir++ < ir0) continue;
+                 if (ir   > ir1) break;
+ 
+-                float theta = (float)p;
++                float theta = (float)p*0.5;
+ 
+                 if (!is_neox) {
+                     for (int64_t i0 = 0; i0 < ne0; i0 += 2) {
+@@ -12536,7 +12536,7 @@ static void ggml_compute_forward_rope_back_f16(
+                 if (ir++ < ir0) continue;
+                 if (ir   > ir1) break;
+ 
+-                float theta = (float)p;
++                float theta = (float)p*0.5;
+ 
+                 if (!is_neox) {
+                     for (int64_t i0 = 0; i0 < ne0; i0 += 2) {
+```
+
 It is an amazingly simple idea that is so powerful.
 
 # Experiments
