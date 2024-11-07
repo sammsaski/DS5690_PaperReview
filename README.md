@@ -151,8 +151,10 @@ For evaluating the PI-augmented models' perplexity in long-context tasks, the au
 ### Applicability to Other Models
 One of the glaring oversights of the paper is that it primarily evaluates PI on LLaMA models, which uses RoPE. However, many popular models (like GPT-4, etc.) use different positional encodings. It's unclear how effective the proposed method would be for extending context window length in models that use other positional encoding techniques.
 
-### Lack of Robustness Testing
+### Lack of Robustness and Scalability Testing
 The paper focuses on tasks like long document summarization and passkey retrieval but doesn’t cover more complex or noisy scenarios, such as handling code, mixed content, or languages with irregular structures. Tests on noisy data or multilingual settings could reveal hidden vulnerabilities.
+
+Additionally, the authors don't test this method until failure. They are able to show that the desired context window length is effectively reached using Position Interpolation, but they don't stress test this to see where it might start to fail.
 
 ### Missing Analysis on Cost of Fine-Tuning using PI
 The authors communicate the efficiency of their method using only the number of training steps needed to achieve results. However, this is a pretty abstract result and does not provide a lot of clarity into the true cost of applying PI to a LLaMA model.
