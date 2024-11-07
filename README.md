@@ -47,7 +47,7 @@ Before jumping into the details of the method, let's first introduce an intuitio
 </p>
 
 <p align="center">
-<img src="images/position-interpolation-formula.png" style="width:60%; height:auto;">
+<img src="images/position-interpolation-formula.png" style="width:50%; height:auto;">
 </p>
 
 # Critical Analysis
