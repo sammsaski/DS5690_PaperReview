@@ -41,6 +41,14 @@ Position Interpolation: instead of extrapolation, directly down-scale the positi
 <img src="images/position-interpolation.png">
 </p>
 
+<p align="center">
+<img src="images/rope-alg.png">
+</p>
+
+<p align="center">
+<img src="images/position-interpolation-formula.png">
+</p>
+
 # Critical Analysis
 
 # Impacts
