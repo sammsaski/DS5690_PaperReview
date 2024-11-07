@@ -42,6 +42,9 @@ Position Interpolation: instead of extrapolation, directly down-scale the positi
 # Critical Analysis
 
 # Impacts
+This work has huge implications for the future of AI. The authors show a computationally efficient way to drastically extend the context window size of transformers, namely the open-source LLaMA. The work itself is additionally open-source. To summarize, the authors have provided an efficient, open-source implementation for a state-of-the-art algorithm for extending the context window size for the LLaMA model. This has largely made available the technology to solve challenging problems such as conducting long conversations, summarizing long documents, or executing long-term planning, which were previously only achievable by large, well-funded institutions due to the computational complexity of training transformers.
+
+# Results
 
 # Resources to directly help understand Position Interpolation better
 1. https://github.com/ggerganov/llama.cpp/discussions/1965 - official discussion by Meta engineers/researchers.
@@ -54,3 +57,16 @@ Position Interpolation: instead of extrapolation, directly down-scale the positi
 2. https://www.llama.com/ - LLaMA
 3. https://arxiv.org/abs/2108.12409 - ALiBi
 4. https://arxiv.org/abs/2212.10554 - LeX
+
+# Notes
+
+The extrapolation problem for transformers is trying to use context windows that are larger than the context window used for training.
+
+Computational complexity of transformers is O(n^2 * d), where n is the sequence length and d is the dimensionality of the embeddings. This heavily limits the size of the context window that we can use when doing heavy training. Therefore, being able to fine-tune (which is much more computationally efficient) and achieve better results with a larger context window, is a really significant result.
+
+- [ ] What is perplexity? Make sure I talk about how perplexity relates to this method. How is it affected?
+
+Figure 2 is bad. The graph on the far right that represents the stability of the method uses a significantly smaller scale of positional difference.
+
+Interesting story with the paper being proposed concurrently by someone else and such...
+
