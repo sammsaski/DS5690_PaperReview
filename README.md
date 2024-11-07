@@ -5,23 +5,6 @@ Link to paper: [Extending Content Window of Large Language Models via Positional
 S. Chen, S. Wong, L. Chen, and Y. Tian, “Extending context window of
 large language models via positional interpolation,” 2023.
 
-# Rubric
-- [x] [2] Technical
-- [x] [5] Presentation (15 minutes or less)
-- [x] [10] Presentation Materials (README format + screen clear enough)
-- [ ] [15] Overview (5-minute overview providing context, stating problem, characterizing approach, brief account of how problem was addressed)
-- [x] [8] Question 1 (prepare and deliver a question to the audience)
-- [x] [5] Question 2 (prepare and deliver a question to the audience)
-- [ ] [15] Architecture overview (pseudocode description of model or approach)
-- [x] [15] Critical Analysis (what was overlooked? what could have been developed further? were there any errors?)
-- [x] [15] Impacts (what was the impact of the work?)\
-- [x] [5] Resource links
-- [ ] [10] Code demonstration
-- [x] [5] Repo
-- [x] [2] Citation
-
-Maximum possible points: 112
-
 ---
 
 <p align="center">
@@ -117,7 +100,14 @@ For evaluating the PI-augmented models' perplexity in long-context tasks, the au
 
 # Critical Analysis
 
+### Applicability to Other Models
 One of the glaring oversights of the paper is that it primarily evaluates PI on LLaMA models, which uses RoPE. However, many popular models (like GPT-4, etc.) use different positional encodings. It's unclear how effective the proposed method would be for extending context window length in models that use other positional encoding techniques.
+
+### Lack of Robustness Testing
+The paper focuses on tasks like long document summarization and passkey retrieval but doesn’t cover more complex or noisy scenarios, such as handling code, mixed content, or languages with irregular structures. Tests on noisy data or multilingual settings could reveal hidden vulnerabilities.
+
+### Missing Analysis on Cost of Fine-Tuning using PI
+The authors communicate the efficiency of their method using only the number of training steps needed to achieve results. However, this is a pretty abstract result and does not provide a lot of clarity into the true cost of applying PI to a LLaMA model.
 
 # Impacts
 This work has huge implications for the future of AI. The authors show a computationally efficient way to drastically extend the context window size of transformers, namely the open-source LLaMA. The work itself is additionally open-source. To summarize, the authors have provided an efficient, open-source implementation for a state-of-the-art algorithm for extending the context window size for the LLaMA model. This has largely made available the technology to solve challenging problems such as conducting long conversations, summarizing long documents, or executing long-term planning, which were previously only achievable by large, well-funded institutions due to the computational complexity of training transformers.
@@ -140,20 +130,5 @@ By providing a more accessible way to acquire a large language model with signif
 2. https://www.llama.com/ - LLaMA
 3. https://arxiv.org/abs/2108.12409 - ALiBi
 4. https://arxiv.org/abs/2212.10554 - LeX
-
-# Notes
-
-The extrapolation problem for transformers is trying to use context windows that are larger than the context window used for training.
-
-Computational complexity of transformers is O(n^2 * d), where n is the sequence length and d is the dimensionality of the embeddings. This heavily limits the size of the context window that we can use when doing heavy training. Therefore, being able to fine-tune (which is much more computationally efficient) and achieve better results with a larger context window, is a really significant result.
-
-- [ ] What is perplexity? Make sure I talk about how perplexity relates to this method. How is it affected?
-
-Figure 2 is bad. The graph on the far right that represents the stability of the method uses a significantly smaller scale of positional difference.
-
-Interesting story with the paper being proposed concurrently by someone else and such...
-
-# Citations
-
 
 
