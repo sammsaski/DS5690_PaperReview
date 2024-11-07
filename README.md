@@ -39,7 +39,7 @@ Position Interpolation: instead of extrapolation, directly down-scale the positi
 # Position Interpolation
 Before jumping into the details of the method, let's first introduce an intuition for it. The image below provides a visualization of how Position Interpolation affects the positional embeddings of a sequence.
 <p align="center">
-<img src="images/position-interpolation.png">
+<img src="images/position-interpolation.png" style="width:100%; height:auto;">
 </p>
 
 <p align="center">
