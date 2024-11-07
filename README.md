@@ -126,10 +126,11 @@ By providing a more accessible way to acquire a large language model with signif
 
 
 ## Resources to directly help understand Position Interpolation better
-1. https://github.com/ggerganov/llama.cpp/discussions/1965 - official discussion by Meta engineers/researchers.
+1. https://github.com/ggerganov/llama.cpp/discussions/1965 - official discussion by Meta engineers/researchers
 2. https://kaiokendev.github.io/til#extending-context-to-8k - initial proof of concept
 3. https://kaiokendev.github.io/context - a longer write up of (2)
 4. https://www.youtube.com/watch?v=oyXdmtHgZFw&ab_channel=GabrielMongaras - a helpful paper review
+5. https://www.reddit.com/r/LocalLLaMA/comments/14fgjqj/a_simple_way_to_extending_context_to_8k/ - Reddit discussion on the topic
 
 ## Background, motivation, and related works of Position Interpolation
 1. https://arxiv.org/abs/2104.09864 - RoPE paper
