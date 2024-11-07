@@ -26,7 +26,7 @@ Maximum possible points: 112
 
 # Overview
 
-**Warm-up:** How does the context window affects computational complexity of transformers?
+**Warm-up:** How does the context window affect the computational complexity of a transformer?
 
 One of major limitations of large language models (LLMs) is the context window. Generally speaking, the model is limited to the context size that it is trained on. Trying to use the model beyond its context window length results in a significant performance drop. This is a problem because the computational complexity of training the large language model is a function of the context size, $O(n^2 \cdot d)$, where $n$ is the context window length. To summarize, large language models struggle to perform on tasks that are beyond the scope of their context window, but increasing the context window causes quadratic growth in the computational demand of training the model.
 
