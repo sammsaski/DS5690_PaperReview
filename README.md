@@ -51,6 +51,7 @@ Rotary position embeddings represent positional information by rotating the toke
 <p align="center">
 <img src="images/rope-example.png" style="width:70%; height:auto;">
 </p>
+_Citation: Sambit Kumar Barik. Decoding Rotary Positional Embeddings (RoPE): The Secret Sauce for Smarter Transformers. [Link](https://medium.com/@DataDry/decoding-rotary-positional-embeddings-rope-the-secret-sauce-for-smarter-transformers-193cbc01e4ed)._
 
 Because RoPE is parameterized by the position of the token in the sequence, then the rotation applied on the token is unique, thereby resulting in an embedding that contains information about its content and its position.
 
