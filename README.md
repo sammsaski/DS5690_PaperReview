@@ -48,6 +48,10 @@ Positional embeddings encode information about the ordering of tokens in a seque
 ### Rotary Position Embeddings (RoPE)
 Rotary position embeddings represent positional information by rotating the token embedding based on its position in the sequence. This rotation is applied in the complex plane and is parameterized by the position index, allowing the model to encode positional differences more naturally. One of the key benefits of RoPE at its introduction was its ability to encode relative and absolute positions between tokens in a sequence.
 
+<p align="center">
+<img src="images/rope-example.png" style="width:100%; height:auto;">
+</p>
+
 
 # Position Interpolation
 Before jumping into the details of the method, let's first introduce an intuition for it. The image below provides a visualization of how Position Interpolation affects the positional embeddings of a sequence.
@@ -119,4 +123,8 @@ Computational complexity of transformers is O(n^2 * d), where n is the sequence 
 Figure 2 is bad. The graph on the far right that represents the stability of the method uses a significantly smaller scale of positional difference.
 
 Interesting story with the paper being proposed concurrently by someone else and such...
+
+# Citations
+
+
 
