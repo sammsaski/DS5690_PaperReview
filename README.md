@@ -43,11 +43,11 @@ Before jumping into the details of the method, let's first introduce an intuitio
 </p>
 
 <p align="center">
-<img src="images/rope-alg.png">
+<img src="images/rope-alg.png" style="width:100%; height:auto;">
 </p>
 
 <p align="center">
-<img src="images/position-interpolation-formula.png">
+<img src="images/position-interpolation-formula.png" style="width:70%; height:auto;">
 </p>
 
 # Critical Analysis
