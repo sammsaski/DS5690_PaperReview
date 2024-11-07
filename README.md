@@ -82,6 +82,8 @@ To apply Positional Interpolation to RoPE, all that needs to be done is a linear
 <img src="images/position-interpolation-formula.png" style="width:50%; height:auto;">
 </p>
 
+It is an amazingly simple idea that is so powerful.
+
 # Experiments
 
 # Results
