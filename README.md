@@ -74,7 +74,9 @@ Next, Positional Interpolation will be explained mathematically. Consider the fo
 <img src="images/rope-alg.png" style="width:100%; height:auto;">
 </p>
 
-To apply Positional Interpolation to RoPE, all that needs to be done is a linear scaling of the indices by a factor of $\frac{L}{L^\prime}$ such that $L, L^\prime$ are the original context window length and new context window length, respectively.
+where $x$ is the token embedding and $m$ is the assigned index based on position in the sequence.
+
+To apply Positional Interpolation to RoPE, all that needs to be done is a linear scaling of the index $m$ by a factor of $\frac{L}{L^\prime}$ such that $L, L^\prime$ are the original context window length and new context window length, respectively.
 
 <p align="center">
 <img src="images/position-interpolation-formula.png" style="width:50%; height:auto;">
