@@ -13,8 +13,8 @@ large language models via positional interpolation,” 2023.
 - [ ] [8] Question 1 (prepare and deliver a question to the audience)
 - [ ] [5] Question 2 (prepare and deliver a question to the audience)
 - [ ] [15] Architecture overview (pseudocode description of model or approach)
-- [ ] [15] Critical Analysis (what was overlooked? what could have been developed further? were there any errors?)
-- [ ] [15] Impacts (what was the impact of the work?)\
+- [x] [15] Critical Analysis (what was overlooked? what could have been developed further? were there any errors?)
+- [x] [15] Impacts (what was the impact of the work?)\
 - [x] [5] Resource links
 - [ ] [10] Code demonstration
 - [x] [5] Repo
