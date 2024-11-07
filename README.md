@@ -39,6 +39,8 @@ Position Interpolation: instead of extrapolation, directly down-scale the positi
 
 # Architecture
 
+[images/position-interpolation.png]
+
 # Critical Analysis
 
 # Impacts
