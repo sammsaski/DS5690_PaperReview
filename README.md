@@ -115,6 +115,8 @@ The paper focuses on tasks like long document summarization and passkey retrieva
 ### Missing Analysis on Cost of Fine-Tuning using PI
 The authors communicate the efficiency of their method using only the number of training steps needed to achieve results. However, this is a pretty abstract result and does not provide a lot of clarity into the true cost of applying PI to a LLaMA model.
 
+In reality, the authors used from 32 up to 128 A100 GPUs. While the authors note that this is not a requirement for using their method, they do not provide any insight into how much of a barrier not having this kind of compute is for using Positional Interpolation.
+
 # Impacts
 This work has huge implications for the future of AI. The authors show a computationally efficient way to drastically extend the context window size of transformers, namely the open-source LLaMA. The work itself is additionally open-source. To summarize, the authors have provided an efficient, open-source implementation for a state-of-the-art algorithm for extending the context window size for the LLaMA model. This has largely made available the technology to solve challenging problems such as conducting long conversations, summarizing long documents, or executing long-term planning, which were previously only achievable by large, well-funded institutions due to the computational complexity of training transformers.
 
