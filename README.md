@@ -119,16 +119,12 @@ A major impact of the this work is that it is primarily focused (and implemented
 By providing a more accessible way to acquire a large language model with significantly longer context window, industries such as health care, legal, and research become domains to which transformers can be applied. Previously, the limits of context window and the computational cost of training a model with a longer context window made it much more challenging for inventive LLM solutions to problems in these industries; of which there are many. For example, models can now process and summarize entire patient histories or legal documents without being constrained by short context windows. This has the potential to streamline operations in domains that require analysis of extended, detailed information.
 
 
-# Resources to directly help understand Position Interpolation better
+## Resources to directly help understand Position Interpolation better
 1. https://github.com/ggerganov/llama.cpp/discussions/1965 - official discussion by Meta engineers/researchers.
 2. https://kaiokendev.github.io/til#extending-context-to-8k - initial proof of concept
 3. https://kaiokendev.github.io/context - a longer write up of (2)
 4. https://www.youtube.com/watch?v=oyXdmtHgZFw&ab_channel=GabrielMongaras - a helpful paper review
 
-# Background, motivation, and related works of Position Interpolation
+## Background, motivation, and related works of Position Interpolation
 1. https://arxiv.org/abs/2104.09864 - RoPE paper
 2. https://www.llama.com/ - LLaMA
-3. https://arxiv.org/abs/2108.12409 - ALiBi
-4. https://arxiv.org/abs/2212.10554 - LeX
-
-
