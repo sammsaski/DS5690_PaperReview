@@ -39,7 +39,7 @@ Position Interpolation: instead of extrapolation, directly down-scale the positi
 
 # Architecture
 
-[images/position-interpolation.png]
+![](images/position-interpolation.png)
 
 # Critical Analysis
 
