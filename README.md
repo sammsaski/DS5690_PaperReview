@@ -38,8 +38,9 @@ Naively, we could try fine-tuning an existing pre-trained Transformer with a lno
 Position Interpolation: instead of extrapolation, directly down-scale the position indices so that the maximum position index matches the previous context window limit in the pre-training stage.
 
 # Architecture
-
+<center>
 ![](images/position-interpolation.png)
+</center>
 
 # Critical Analysis
 
