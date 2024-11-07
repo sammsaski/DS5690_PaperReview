@@ -32,6 +32,8 @@ Position Interpolation linearly down-scales the input position indices to match 
 
 The problem: can we extend the context window of an existing pre-trained LLM?
 
+**Q:** What happens if we extrapolate too far?
+
 Naively, we could try fine-tuning an existing pre-trained Transformer with a lnoger context window. Empirically, however, the authors found that models trained this way adapt to long context windows very slowly. Table 4 shows that training this way for long periods of time (> 10000 batches) resulted in only an effective context window length increase from 2048 -> 2560, whereas PI could do it up to 32768 in less than 1000 batches.
 
 Position Interpolation: instead of extrapolation, directly down-scale the position indices so that the maximum position index matches the previous context window limit in the pre-training stage.
