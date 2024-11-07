@@ -26,6 +26,8 @@ Maximum possible points: 112
 
 # Overview
 
+**Warm-up:** does anyone remember how the context window affects computational complexity of transformers?
+
 One of major limitations of large language models (LLMs) is the context window. Generally speaking, the model is limited to the context size that it is trained on. Trying to use the model beyond its context window length results in a significant performance drop. This is a problem because the computational complexity of training the large language model is a function of the context size, $O(n^2 \cdot d)$, where $n$ is the context window length. To summarize, large language models struggle to perform on tasks that are beyond the scope of their context window, but increasing the context window causes quadratic growth in the computational demand of training the model.
 
 This leads us to the problem statement: **can we extend the context window of an existing pre-trained LLM?**
@@ -35,8 +37,6 @@ This problem statement is a direct target of the concerns outlined above. First,
 Naively, we could try fine-tuning an existing pre-trained Transformer with a lnoger context window. Empirically, however, the authors found that models trained this way adapt to long context windows very slowly. Table 4 shows that training this way for long periods of time (> 10000 batches) resulted in only an effective context window length increase from 2048 -> 2560, whereas PI could do it up to 32768 in less than 1000 batches.
 
 To answer these demands, the authors introduce **Position Interpolation** (PI). Position Interpolation linearly down-scales the input position indices to match the original context window size, rather than extrapolating beyond the trained context length, which may lead to catastrophically high attention scores that completely ruin the self-attention mechanism.
-
-**Q:** What happens if we extrapolate too far?
 
 # Background
 
