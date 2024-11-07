@@ -25,7 +25,7 @@ Maximum possible points: 112
 ---
 
 <p align="center">
-<img src="images/warm-up-question.png" style="width:100%;">
+<img src="images/warm-up-question.png">
 </p>
 
 
