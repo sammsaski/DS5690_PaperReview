@@ -57,8 +57,6 @@ Rotary position embeddings represent positional information by rotating the toke
 
 _Citation: Sambit Kumar Barik. Decoding Rotary Positional Embeddings (RoPE): The Secret Sauce for Smarter Transformers._ [Link](https://medium.com/@DataDry/decoding-rotary-positional-embeddings-rope-the-secret-sauce-for-smarter-transformers-193cbc01e4ed).
 
-
-
 Because RoPE is parameterized by the position of the token in the sequence, then the rotation applied on the token is unique, thereby resulting in an embedding that contains information about its content and its position.
 
 
@@ -68,9 +66,15 @@ Before jumping into the details of the method, let's first introduce an intuitio
 <img src="images/position-interpolation.png" style="width:100%; height:auto;">
 </p>
 
+The top graph shows the method of extrapolation in which the positional encoding mechanism goes beyond the context window and tries to generate positional embeddings beyond what it has done in training. The bottom graph showcases Positional Interpolation. We see that PI squishes the original position embeddings for the original context window to make room for the new positional embeddings computed on the new context window length. This way, the model is handling positional embeddings that it has seen before and we limit the growth of the indices that parameterize RoPE.
+
+Next, Positional Interpolation will be explained mathematically. Consider the following formula for computing a positional embedding using RoPE:
+
 <p align="center">
 <img src="images/rope-alg.png" style="width:100%; height:auto;">
 </p>
+
+To apply Positional Interpolation to RoPE, all that needs to be done is a linear scaling of the indices by a factor of $\frac{L}{L^\prime}$ such that $L, L^\prime$ are the original context window length and new context window length, respectively.
 
 <p align="center">
 <img src="images/position-interpolation-formula.png" style="width:50%; height:auto;">
