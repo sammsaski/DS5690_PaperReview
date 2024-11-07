@@ -45,7 +45,8 @@ To answer these demands, the authors introduce **Position Interpolation** (PI). 
 
 Positional embeddings encode information about the ordering of tokens in a sequence. It is easy to see how significantly the meaning of a sentence can change when changing only the ordering of the words. For example, let's look at the phrase "Samuel Sasaki is a fan of LeBron James". By manipulating the ordering of the words, one possible outcome is "Lebron James is a fan of Samuel Sasaki", which, as much as I might want it to be, is just not true.
 
-### Rotary Positional Embeddings (RoPE)
+### Rotary Position Embeddings (RoPE)
+Rotary position embeddings represent positional information by rotating the token embedding based on its position in the sequence. This rotation is applied in the complex plane and is parameterized by the position index, allowing the model to encode positional differences more naturally. One of the key benefits of RoPE at its introduction was its ability to encode relative and absolute positions between tokens in a sequence.
 
 
 # Position Interpolation
